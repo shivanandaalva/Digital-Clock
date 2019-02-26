@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var session ="AM"
+      if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+          session = "PM";
+    }
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s +" "+ session;
+    var t = setTimeout(startTime, 500);
+}
+
+</script>
+</head>
+<body onload="startTime()">
+<div id="txt"></div>
+
+</body>
+</html>

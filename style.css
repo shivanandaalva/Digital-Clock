@@ -1,0 +1,8 @@
+body{
+    background-color:#212121;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    font-family: verdana;
+    transform: translateY(200%);
+}
